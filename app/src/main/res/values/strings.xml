@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">QRCodeCreater</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="share">Share</string>
+    <string name="put_youtube_url_here">Put YouTube URL here</string>
+    <string name="youtube">YouTube</string>
+    <string name="home">Home</string>
+    <string name="instagram">Instagram</string>
+    <string name="telegram">Telegram</string>
+    <string name="vk_logo">вконтакте</string>
+    <string name="enter_any_letter">Enter any letter</string>
+    <string name="enter_username_here">Enter username here</string>
+</resources>
