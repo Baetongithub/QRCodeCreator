@@ -14,33 +14,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:layout_constraintTop_toTopOf="parent">
+            android:title="@string/vk_logo"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/image_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/back"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/tv_back_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/home"
-                android:textColor="@color/black"
-                android:textSize="17sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_start_tv_toolbar"
-                android:gravity="center_horizontal"
-                android:text="@string/vk_logo"
-                android:textColor="@color/black"
-                android:textSize="18.5sp" />
-
-        </Toolbar>
 
         <RelativeLayout
             android:id="@+id/rl_et_url"
@@ -94,6 +70,7 @@
             tools:ignore="ContentDescription" />
 
         <Button
+            android:id="@+id/button_share"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="40dp"
@@ -103,6 +80,31 @@
             android:textSize="17sp"
             app:layout_constraintTop_toBottomOf="@id/image_qr_code" />
 
+        <Button
+            android:id="@+id/button_print"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#7A7B80"
+            android:text="Print"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/button_share" />
+
+        <Button
+            android:id="@+id/button_save_to_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#3D4485"
+            android:text="Save to gallery"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/button_print" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

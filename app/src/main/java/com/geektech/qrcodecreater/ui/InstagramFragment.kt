@@ -26,5 +26,4 @@ class InstagramFragment : BaseFragment<FragmentInstagramBinding>() {
             }
         }
     }
-
 }

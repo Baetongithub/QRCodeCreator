@@ -11,4 +11,5 @@
     <string name="vk_logo">вконтакте</string>
     <string name="enter_any_letter">Enter any letter</string>
     <string name="enter_username_here">Enter username here</string>
+    <string name="something_went_wrong">Something went wrong</string>
 </resources>

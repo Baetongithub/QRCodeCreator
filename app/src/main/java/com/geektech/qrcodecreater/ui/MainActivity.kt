@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp()
-    }
+    override fun onSupportNavigateUp(): Boolean =
+        NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp()
 }

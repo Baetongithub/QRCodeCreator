@@ -2,7 +2,7 @@
 <resources>
     <dimen name="margin_top">26dp</dimen>
     <dimen name="margin_start_end">46dp</dimen>
-    <dimen name="margin_start_tv_toolbar">100dp</dimen>
+    <dimen name="margin_start_tv_toolbar">150dp</dimen>
     <dimen name="et_url_padding">5dp</dimen>
     <dimen name="et_url_margin">5dp</dimen>
 </resources>
