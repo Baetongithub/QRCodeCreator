@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="image_qr_code">
+        <item name="android:src">@color/white</item>
+        <item name="android:layout_width">@dimen/image_qr_code_width_height</item>
+        <item name="android:layout_height">@dimen/image_qr_code_width_height</item>
+        <item name="android:layout_marginTop">@dimen/image_qr_code_margin_top</item>
+    </style>
+</resources>

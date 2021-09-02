@@ -1,7 +1,8 @@
-package com.geektech.qrcodecreater.ui
+package com.geektech.qrcodecreater.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.AppBarConfiguration
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initNavController() {
         appBarConfiguration = AppBarConfiguration.Builder(
-            R.id.mainFragment,
+            R.id.homeFragment,
             R.id.youTubeFragment,
             R.id.instagramFragment,
             R.id.TGFragment,
@@ -34,6 +35,21 @@ class MainActivity : AppCompatActivity() {
         ).build()
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            val list: ArrayList<Int> = ArrayList()
+            list.add(R.id.homeFragment)
+            list.add(R.id.youTubeFragment)
+            list.add(R.id.instagramFragment)
+            list.add(R.id.TGFragment)
+            list.add(R.id.VKFragment)
+            list.add(R.id.anyURLFragment)
+
+            if (destination.id == R.id.homeFragment) {
+                window.statusBarColor = ContextCompat.getColor(this, R.color.light_green)
+            } else {
+                window.statusBarColor = ContextCompat.getColor(this, R.color.white)
+            }
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean =

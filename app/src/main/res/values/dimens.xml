@@ -5,4 +5,6 @@
     <dimen name="margin_start_tv_toolbar">150dp</dimen>
     <dimen name="et_url_padding">5dp</dimen>
     <dimen name="et_url_margin">5dp</dimen>
+    <dimen name="image_qr_code_width_height">300dp</dimen>
+    <dimen name="image_qr_code_margin_top">30dp</dimen>
 </resources>

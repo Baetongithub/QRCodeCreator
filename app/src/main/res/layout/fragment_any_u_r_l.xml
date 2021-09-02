@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AnyURLFragment">
+    tools:context=".ui.fragments.AnyURLFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,8 +14,26 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:title="Any URLs"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/back"
+                app:tint="@color/black" />
+
+
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Any URLs"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </Toolbar>
 
         <TextView
             android:id="@+id/tv_desc_any_urls"
@@ -65,12 +83,9 @@
 
         </RelativeLayout>
 
-
         <ImageView
             android:id="@+id/image_qr_code"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="30dp"
+            style="@style/image_qr_code"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rl_et_url"

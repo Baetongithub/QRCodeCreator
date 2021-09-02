@@ -3,36 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/instagramFragment"
-        android:name="com.geektech.qrcodecreater.ui.InstagramFragment"
+        android:name="com.geektech.qrcodecreater.ui.fragments.InstagramFragment"
         android:label="fragment_instagram"
         tools:layout="@layout/fragment_instagram" />
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.geektech.qrcodecreater.ui.HomeFragment"
+        android:id="@+id/homeFragment"
+        android:name="com.geektech.qrcodecreater.ui.fragments.HomeFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/anyURLFragment"
-        android:name="com.geektech.qrcodecreater.ui.AnyURLFragment"
+        android:name="com.geektech.qrcodecreater.ui.fragments.AnyURLFragment"
         android:label="fragment_any_u_r_l"
         tools:layout="@layout/fragment_any_u_r_l" />
     <fragment
         android:id="@+id/TGFragment"
-        android:name="com.geektech.qrcodecreater.ui.TGFragment"
+        android:name="com.geektech.qrcodecreater.ui.fragments.TGFragment"
         android:label="fragment_t_g"
         tools:layout="@layout/fragment_t_g" />
     <fragment
         android:id="@+id/VKFragment"
-        android:name="com.geektech.qrcodecreater.ui.VKFragment"
+        android:name="com.geektech.qrcodecreater.ui.fragments.VKFragment"
         android:label="fragment_v_k"
         tools:layout="@layout/fragment_v_k" />
     <fragment
         android:id="@+id/youTubeFragment"
-        android:name="com.geektech.qrcodecreater.ui.YouTubeFragment"
+        android:name="com.geektech.qrcodecreater.ui.fragments.YouTubeFragment"
         android:label="fragment_you_tube"
         tools:layout="@layout/fragment_you_tube" />
 </navigation>

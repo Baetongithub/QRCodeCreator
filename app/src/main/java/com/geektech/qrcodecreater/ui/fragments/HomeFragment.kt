@@ -1,4 +1,4 @@
-package com.geektech.qrcodecreater.ui
+package com.geektech.qrcodecreater.ui.fragments
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -24,27 +24,27 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         vb.rlYoutube.setOnClickListener {
             val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
             navController.navigate(R.id.youTubeFragment)
-            context?.toast(vb.tvYoutube.text.toString())
+            toast(vb.tvYoutube.text.toString())
         }
         vb.rlInstagram.setOnClickListener {
             val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
             navController.navigate(R.id.instagramFragment)
-            context?.toast(vb.tvInstagram.text.toString())
+            toast(vb.tvInstagram.text.toString())
         }
         vb.rlTg.setOnClickListener {
             val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
             navController.navigate(R.id.TGFragment)
-            context?.toast(vb.tvTg.text.toString())
+            toast(vb.tvTg.text.toString())
         }
         vb.rlVk.setOnClickListener {
             val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
             navController.navigate(R.id.VKFragment)
-            context?.toast(vb.tvVk.text.toString())
+            toast(vb.tvVk.text.toString())
         }
         vb.rlOther.setOnClickListener {
             val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
             navController.navigate(R.id.anyURLFragment)
-            context?.toast(vb.tvAnyUrls.text.toString())
+            toast(vb.tvAnyUrls.text.toString())
         }
     }
 
