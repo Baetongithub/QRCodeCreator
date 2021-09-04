@@ -3,6 +3,7 @@ package com.geektech.qrcodecreater.ui.fragments
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import androidx.fragment.app.commit
 import com.geektech.qrcodecreater.databinding.FragmentAnyURLBinding
 import com.geektech.qrcodecreater.extensions.toast
 import com.geektech.qrcodecreater.ui.base.BaseFragment

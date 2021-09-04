@@ -5,9 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
-import com.geektech.qrcodecreater.R
 
 abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
@@ -28,8 +27,12 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
     abstract fun viewBinding(inflater: LayoutInflater, container: ViewGroup?): VB
     abstract fun setupUI()
+
     fun navigateUp() {
-        val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-        navController.navigateUp()
+        findNavController().navigateUp()
+    }
+
+    fun navigate(fragmentId: Int) {
+        findNavController().navigate(fragmentId)
     }
 }

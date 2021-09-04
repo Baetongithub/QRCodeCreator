@@ -6,6 +6,7 @@ import com.geektech.qrcodecreater.databinding.FragmentVKBinding
 import com.geektech.qrcodecreater.extensions.toast
 import com.geektech.qrcodecreater.ui.base.BaseFragment
 import com.geektech.qrcodecreater.utils.GenerateCode
+import com.geektech.qrcodecreater.utils.HideKeyboard
 import com.geektech.qrcodecreater.utils.PrintHelp
 import com.geektech.qrcodecreater.utils.ShareImage
 
@@ -15,6 +16,7 @@ class VKFragment : BaseFragment<FragmentVKBinding>() {
 
     override fun setupUI() {
         vb.imageScanAction.setOnClickListener {
+            HideKeyboard.hide(activity)
             GenerateCode.generate(context, "https://vk.com/" + vb.etUrl.text.toString(), vb.imageQrCode)
         }
 
@@ -23,5 +25,7 @@ class VKFragment : BaseFragment<FragmentVKBinding>() {
         vb.buttonPrint.setOnClickListener { PrintHelp.doPhotoPrint(activity, vb.imageQrCode) }
 
         vb.buttonSaveToGallery.setOnClickListener { toast("Feature is going to be developed asap") }
+
+        vb.imageBack.setOnClickListener { navigateUp() }
     }
 }

@@ -16,11 +16,20 @@
             android:layout_height="?attr/actionBarSize"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
+            <ImageView
+                android:id="@+id/image_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:src="@mipmap/back"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingEnd="@dimen/tv_toolbar_padding_end"
+                android:paddingStart="@dimen/tv_toolbar_padding_start"
                 android:fontFamily="@font/fjalla_one"
-                android:gravity="center_horizontal"
                 android:text="@string/youtube"
                 android:textColor="@color/black"
                 android:textSize="18.5sp" />

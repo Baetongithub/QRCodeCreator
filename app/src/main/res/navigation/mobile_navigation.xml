@@ -6,30 +6,76 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.geektech.qrcodecreater.ui.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_instagramFragment"
+            app:destination="@id/instagramFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_TGFragment"
+            app:destination="@id/TGFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_youTubeFragment"
+            app:destination="@id/youTubeFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_anyURLFragment"
+            app:destination="@id/anyURLFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_VKFragment"
+            app:destination="@id/VKFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+
+    <fragment
         android:id="@+id/instagramFragment"
         android:name="com.geektech.qrcodecreater.ui.fragments.InstagramFragment"
         android:label="fragment_instagram"
         tools:layout="@layout/fragment_instagram" />
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.geektech.qrcodecreater.ui.fragments.HomeFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_home" />
+
     <fragment
         android:id="@+id/anyURLFragment"
         android:name="com.geektech.qrcodecreater.ui.fragments.AnyURLFragment"
         android:label="fragment_any_u_r_l"
         tools:layout="@layout/fragment_any_u_r_l" />
+
     <fragment
         android:id="@+id/TGFragment"
         android:name="com.geektech.qrcodecreater.ui.fragments.TGFragment"
         android:label="fragment_t_g"
         tools:layout="@layout/fragment_t_g" />
+
     <fragment
         android:id="@+id/VKFragment"
         android:name="com.geektech.qrcodecreater.ui.fragments.VKFragment"
         android:label="fragment_v_k"
         tools:layout="@layout/fragment_v_k" />
+
     <fragment
         android:id="@+id/youTubeFragment"
         android:name="com.geektech.qrcodecreater.ui.fragments.YouTubeFragment"

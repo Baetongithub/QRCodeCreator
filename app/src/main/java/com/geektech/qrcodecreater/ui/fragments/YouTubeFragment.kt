@@ -6,6 +6,7 @@ import com.geektech.qrcodecreater.databinding.FragmentYouTubeBinding
 import com.geektech.qrcodecreater.extensions.toast
 import com.geektech.qrcodecreater.ui.base.BaseFragment
 import com.geektech.qrcodecreater.utils.GenerateCode
+import com.geektech.qrcodecreater.utils.HideKeyboard
 import com.geektech.qrcodecreater.utils.PrintHelp
 import com.geektech.qrcodecreater.utils.ShareImage
 
@@ -15,6 +16,7 @@ class YouTubeFragment : BaseFragment<FragmentYouTubeBinding>() {
 
     override fun setupUI() {
         vb.imageScanAction.setOnClickListener {
+            HideKeyboard.hide(activity)
             GenerateCode.generate(context, vb.etUrl.text.toString(), vb.imageQrCode)
         }
 
@@ -23,5 +25,7 @@ class YouTubeFragment : BaseFragment<FragmentYouTubeBinding>() {
         vb.buttonPrint.setOnClickListener { PrintHelp.doPhotoPrint(activity, vb.imageQrCode) }
 
         vb.buttonSaveToGallery.setOnClickListener { toast("Feature is going to be developed asap") }
+
+        vb.imageBack.setOnClickListener { navigateUp() }
     }
 }

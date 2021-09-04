@@ -2,11 +2,8 @@ package com.geektech.qrcodecreater.ui.fragments
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.view.WindowManager
-import androidx.navigation.Navigation
 import com.geektech.qrcodecreater.R
 import com.geektech.qrcodecreater.databinding.FragmentHomeBinding
-import com.geektech.qrcodecreater.extensions.toast
 import com.geektech.qrcodecreater.ui.base.BaseFragment
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
@@ -14,44 +11,20 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         FragmentHomeBinding.inflate(inflater, container, false)
 
     override fun setupUI() {
-        setStatusBarGradient()
 
         initClicks()
     }
 
     private fun initClicks() {
 
-        vb.rlYoutube.setOnClickListener {
-            val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-            navController.navigate(R.id.youTubeFragment)
-            toast(vb.tvYoutube.text.toString())
-        }
-        vb.rlInstagram.setOnClickListener {
-            val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-            navController.navigate(R.id.instagramFragment)
-            toast(vb.tvInstagram.text.toString())
-        }
-        vb.rlTg.setOnClickListener {
-            val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-            navController.navigate(R.id.TGFragment)
-            toast(vb.tvTg.text.toString())
-        }
-        vb.rlVk.setOnClickListener {
-            val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-            navController.navigate(R.id.VKFragment)
-            toast(vb.tvVk.text.toString())
-        }
-        vb.rlOther.setOnClickListener {
-            val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-            navController.navigate(R.id.anyURLFragment)
-            toast(vb.tvAnyUrls.text.toString())
-        }
-    }
+        vb.rlYoutube.setOnClickListener { navigate(R.id.action_homeFragment_to_youTubeFragment) }
 
-    private fun setStatusBarGradient() {
-        activity?.window?.setFlags(
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        )
+        vb.rlInstagram.setOnClickListener { navigate(R.id.action_homeFragment_to_instagramFragment) }
+
+        vb.rlTg.setOnClickListener { navigate(R.id.action_homeFragment_to_TGFragment) }
+
+        vb.rlVk.setOnClickListener { navigate(R.id.action_homeFragment_to_VKFragment) }
+
+        vb.rlOther.setOnClickListener { navigate(R.id.action_homeFragment_to_anyURLFragment) }
     }
 }

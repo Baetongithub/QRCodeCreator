@@ -29,6 +29,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
+                android:paddingEnd="@dimen/tv_toolbar_padding_end"
+                android:paddingStart="@dimen/tv_toolbar_padding_start"
                 android:text="Any URLs"
                 android:textColor="@color/black"
                 android:textSize="18sp" />

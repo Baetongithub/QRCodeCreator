@@ -2,9 +2,10 @@
 <resources>
     <dimen name="margin_top">26dp</dimen>
     <dimen name="margin_start_end">46dp</dimen>
-    <dimen name="margin_start_tv_toolbar">150dp</dimen>
     <dimen name="et_url_padding">5dp</dimen>
     <dimen name="et_url_margin">5dp</dimen>
     <dimen name="image_qr_code_width_height">300dp</dimen>
     <dimen name="image_qr_code_margin_top">30dp</dimen>
+    <dimen name="tv_toolbar_padding_end">30dp</dimen>
+    <dimen name="tv_toolbar_padding_start">0dp</dimen>
 </resources>
