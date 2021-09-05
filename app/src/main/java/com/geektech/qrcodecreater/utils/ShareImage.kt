@@ -13,12 +13,12 @@ import java.io.FileOutputStream
 
 object ShareImage {
 
-    fun share(context: Context?, imageView: ImageView) {
+    fun share(context: Context?, imageView: ImageView, name: String) {
         try {
             val file =
                 File(
                     context?.applicationContext?.externalCacheDir,
-                    File.separator + "image file youtube"
+                    File.separator + name
                 )
             val fileOutputStream = FileOutputStream(file)
             val bitmap: Bitmap = (GetDrawable.drawable(imageView) as BitmapDrawable).bitmap

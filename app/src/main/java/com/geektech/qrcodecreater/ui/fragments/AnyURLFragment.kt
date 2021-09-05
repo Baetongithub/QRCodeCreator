@@ -3,14 +3,9 @@ package com.geektech.qrcodecreater.ui.fragments
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import androidx.fragment.app.commit
 import com.geektech.qrcodecreater.databinding.FragmentAnyURLBinding
-import com.geektech.qrcodecreater.extensions.toast
 import com.geektech.qrcodecreater.ui.base.BaseFragment
-import com.geektech.qrcodecreater.utils.GenerateCode
-import com.geektech.qrcodecreater.utils.HideKeyboard
-import com.geektech.qrcodecreater.utils.PrintHelp
-import com.geektech.qrcodecreater.utils.ShareImage
+import com.geektech.qrcodecreater.utils.*
 
 class AnyURLFragment : BaseFragment<FragmentAnyURLBinding>() {
     override fun viewBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentAnyURLBinding =
@@ -34,11 +29,11 @@ class AnyURLFragment : BaseFragment<FragmentAnyURLBinding>() {
             false
         }
 
-        vb.buttonShare.setOnClickListener { ShareImage.share(context, vb.imageQrCode) }
+        vb.buttonShare.setOnClickListener { ShareImage.share(context, vb.imageQrCode, "Other QR codes") }
 
         vb.buttonPrint.setOnClickListener { PrintHelp.doPhotoPrint(activity, vb.imageQrCode) }
 
-        vb.buttonSaveToGallery.setOnClickListener { toast("Feature is going to be developed asap") }
+        vb.buttonSaveToGallery.setOnClickListener { SavePhotoToStorage.save(context, vb.imageQrCode) }
 
         vb.imageBack.setOnClickListener { navigateUp() }
     }

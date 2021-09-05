@@ -2,6 +2,7 @@ package com.geektech.qrcodecreater.ui.fragments
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toolbar
 import com.geektech.qrcodecreater.R
 import com.geektech.qrcodecreater.databinding.FragmentHomeBinding
 import com.geektech.qrcodecreater.ui.base.BaseFragment
@@ -11,6 +12,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         FragmentHomeBinding.inflate(inflater, container, false)
 
     override fun setupUI() {
+
+        val toolbar: Toolbar? = activity?.findViewById(R.id.toolbar_custom)
+        activity?.setActionBar(toolbar)
 
         initClicks()
     }

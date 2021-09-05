@@ -8,4 +8,6 @@
     <dimen name="image_qr_code_margin_top">30dp</dimen>
     <dimen name="tv_toolbar_padding_end">30dp</dimen>
     <dimen name="tv_toolbar_padding_start">0dp</dimen>
+    <dimen name="margin_top_layout">24dp</dimen>
+    <dimen name="other_s_n_padding">3dp</dimen>
 </resources>

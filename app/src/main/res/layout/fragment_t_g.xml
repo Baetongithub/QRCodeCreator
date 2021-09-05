@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/margin_top_layout"
     tools:context=".ui.fragments.TGFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,7 +15,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-             app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/image_back"
@@ -27,8 +28,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:paddingEnd="@dimen/tv_toolbar_padding_end"
                 android:paddingStart="@dimen/tv_toolbar_padding_start"
+                android:paddingEnd="@dimen/tv_toolbar_padding_end"
                 android:text="@string/telegram"
                 android:textColor="@color/black"
                 android:textSize="18sp" />

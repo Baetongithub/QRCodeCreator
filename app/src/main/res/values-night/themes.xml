@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.QRCodeCreater" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.QRCodeCreator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/white</item>
@@ -12,8 +12,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        Status bar items in dark or vice versa
+<!--        Status bar items in dark or vice versa-->
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
 
+<!--        layout occupies the entire screen area (even the status bar)-->
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
 </resources>

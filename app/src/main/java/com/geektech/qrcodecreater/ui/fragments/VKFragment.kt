@@ -3,12 +3,8 @@ package com.geektech.qrcodecreater.ui.fragments
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.geektech.qrcodecreater.databinding.FragmentVKBinding
-import com.geektech.qrcodecreater.extensions.toast
 import com.geektech.qrcodecreater.ui.base.BaseFragment
-import com.geektech.qrcodecreater.utils.GenerateCode
-import com.geektech.qrcodecreater.utils.HideKeyboard
-import com.geektech.qrcodecreater.utils.PrintHelp
-import com.geektech.qrcodecreater.utils.ShareImage
+import com.geektech.qrcodecreater.utils.*
 
 class VKFragment : BaseFragment<FragmentVKBinding>() {
     override fun viewBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentVKBinding =
@@ -20,11 +16,11 @@ class VKFragment : BaseFragment<FragmentVKBinding>() {
             GenerateCode.generate(context, "https://vk.com/" + vb.etUrl.text.toString(), vb.imageQrCode)
         }
 
-        vb.buttonShare.setOnClickListener { ShareImage.share(context, vb.imageQrCode) }
+        vb.buttonShare.setOnClickListener { ShareImage.share(context, vb.imageQrCode, "VK") }
 
         vb.buttonPrint.setOnClickListener { PrintHelp.doPhotoPrint(activity, vb.imageQrCode) }
 
-        vb.buttonSaveToGallery.setOnClickListener { toast("Feature is going to be developed asap") }
+        vb.buttonSaveToGallery.setOnClickListener { SavePhotoToStorage.save(context, vb.imageQrCode) }
 
         vb.imageBack.setOnClickListener { navigateUp() }
     }

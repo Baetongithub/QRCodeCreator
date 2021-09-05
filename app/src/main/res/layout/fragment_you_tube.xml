@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/margin_top_layout"
     tools:context=".ui.fragments.YouTubeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,10 +27,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:paddingEnd="@dimen/tv_toolbar_padding_end"
-                android:paddingStart="@dimen/tv_toolbar_padding_start"
                 android:fontFamily="@font/fjalla_one"
+                android:gravity="center"
+                android:paddingStart="@dimen/tv_toolbar_padding_start"
+                android:paddingEnd="@dimen/tv_toolbar_padding_end"
                 android:text="@string/youtube"
                 android:textColor="@color/black"
                 android:textSize="18.5sp" />

@@ -9,31 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:id="@+id/rl_appbar_layout"
+        <LinearLayout
+            android:id="@+id/line_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/backgr_main_gradient"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent">
 
-            <Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp">
+            <include layout="@layout/custom_toolbar" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:gravity="bottom"
-                    android:text="Make your QR-code"
-                    android:textColor="@color/black" />
-
-            </Toolbar>
-        </RelativeLayout>
+        </LinearLayout>
 
         <RelativeLayout
             android:id="@+id/rl_youtube"
@@ -45,7 +29,7 @@
             android:background="@drawable/backgr_status_bar_gradient"
             app:layout_constraintEnd_toStartOf="@id/rl_instagram"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rl_appbar_layout">
+            app:layout_constraintTop_toBottomOf="@id/line_toolbar">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view_youtube"
@@ -58,7 +42,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/youtube" />
+                    android:src="@mipmap/youtube"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -83,7 +68,7 @@
             android:layout_marginEnd="@dimen/margin_start_end"
             android:background="@drawable/backgr_status_bar_gradient"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rl_appbar_layout">
+            app:layout_constraintTop_toBottomOf="@id/line_toolbar">
 
             <ImageView
                 android:id="@+id/image_instagram"
@@ -91,7 +76,8 @@
                 android:layout_height="40dp"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
-                android:src="@mipmap/instagram" />
+                android:src="@mipmap/instagram"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_instagram"
@@ -125,7 +111,8 @@
                 android:layout_height="40dp"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
-                android:src="@mipmap/telegram" />
+                android:src="@mipmap/telegram"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_tg"
@@ -156,7 +143,8 @@
                 android:layout_height="40dp"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
-                android:src="@mipmap/vk" />
+                android:src="@mipmap/vk"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_vk"
@@ -191,16 +179,18 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:src="@mipmap/others"
-                app:tint="#203861" />
+                app:tint="#203861"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_any_urls"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:padding="@dimen/other_s_n_padding"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@id/image_others"
-                android:text="Any URLs\nAny words"
+                android:text="Other social networks"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 

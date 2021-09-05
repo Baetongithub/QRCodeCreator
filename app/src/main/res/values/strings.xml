@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QRCodeCreater</string>
+    <string name="app_name">QRCodeCreator</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="share">Share</string>
@@ -8,8 +8,9 @@
     <string name="home">Home</string>
     <string name="instagram">Instagram</string>
     <string name="telegram">Telegram</string>
-    <string name="vk_logo">вконтакте</string>
+    <string name="vk_logo">VK</string>
     <string name="enter_any_letter">Enter any letter</string>
     <string name="enter_username_here">Enter username here</string>
     <string name="something_went_wrong">Something went wrong</string>
+    <string name="code_not_found">Code not found</string>
 </resources>

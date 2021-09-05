@@ -12,5 +12,4 @@ object HideKeyboard {
         if (view == null) view = View(activity)
         imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
-
 }
