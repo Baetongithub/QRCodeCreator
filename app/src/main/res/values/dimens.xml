@@ -10,4 +10,5 @@
     <dimen name="tv_toolbar_padding_start">0dp</dimen>
     <dimen name="margin_top_layout">24dp</dimen>
     <dimen name="other_s_n_padding">3dp</dimen>
+    <dimen name="elevation_ten_dp">10dp</dimen>
 </resources>

@@ -13,4 +13,9 @@
     <string name="enter_username_here">Enter username here</string>
     <string name="something_went_wrong">Something went wrong</string>
     <string name="code_not_found">Code not found</string>
+    <string name="instagram">Instagram</string>
+    <string name="telegram">Telegram</string>
+    <string name="youtube">YouTube</string>
+    <string name="vk">VK</string>
+    <string name="other_social_networks">Other social networks</string>
 </resources>
