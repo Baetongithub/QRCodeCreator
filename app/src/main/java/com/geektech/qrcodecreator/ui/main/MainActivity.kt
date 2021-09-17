@@ -1,10 +1,10 @@
-package com.geektech.qrcodecreater.ui.main
+package com.geektech.qrcodecreator.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import com.geektech.qrcodecreater.R
-import com.geektech.qrcodecreater.databinding.ActivityMainBinding
+import com.geektech.qrcodecreator.R
+import com.geektech.qrcodecreator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

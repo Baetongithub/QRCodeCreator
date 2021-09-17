@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_green">#A4DD80</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="button_share">#6979F8</color>
+    <color name="button_print">#7A7B80</color>
+    <color name="button_save_to_gallery">#3D4485</color>
 </resources>

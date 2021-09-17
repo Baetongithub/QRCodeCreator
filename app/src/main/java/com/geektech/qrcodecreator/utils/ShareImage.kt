@@ -1,4 +1,4 @@
-package com.geektech.qrcodecreater.utils
+package com.geektech.qrcodecreator.utils
 
 import android.content.Context
 import android.content.Intent
@@ -7,7 +7,9 @@ import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.widget.ImageView
 import androidx.core.content.FileProvider
-import com.geektech.qrcodecreater.BuildConfig
+import com.geektech.qrcodecreator.BuildConfig
+import com.geektech.qrcodecreator.R
+import com.geektech.qrcodecreator.extensions.toast
 import java.io.File
 import java.io.FileOutputStream
 
@@ -38,9 +40,9 @@ object ShareImage {
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             intent.type = "image/jpg"
 
-            context.startActivity(Intent.createChooser(intent, "Share QR code via"))
+            context.startActivity(Intent.createChooser(intent, context.getString(R.string.share_qr_code_via)))
         } catch (e: Exception) {
-            e.printStackTrace()
+            context?.toast(context.getString(R.string.something_went_wrong) + " ${e.localizedMessage}")
         }
     }
 }

@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="@dimen/margin_top_layout"
-    tools:context=".ui.fragments.InstagramFragment">
+    tools:context=".ui.fragments.FacebookFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:title="@string/facebook"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -24,20 +25,19 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fontFamily="@font/cookie"
             android:gravity="center"
             android:paddingStart="@dimen/tv_toolbar_padding_start"
             android:paddingEnd="@dimen/tv_toolbar_padding_end"
-            android:text="@string/instagram"
+            android:text="@string/facebook"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="18sp" />
 
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

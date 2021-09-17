@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin_top">26dp</dimen>
-    <dimen name="margin_start_end">46dp</dimen>
+    <dimen name="margin_start_end">30dp</dimen>
     <dimen name="et_url_padding">5dp</dimen>
     <dimen name="et_url_margin">5dp</dimen>
     <dimen name="image_qr_code_width_height">300dp</dimen>
@@ -11,4 +11,10 @@
     <dimen name="margin_top_layout">24dp</dimen>
     <dimen name="other_s_n_padding">3dp</dimen>
     <dimen name="elevation_ten_dp">10dp</dimen>
+    <dimen name="custom_toolbar_height">100dp</dimen>
+    <dimen name="padding_main_constraint">5dp</dimen>
+    <dimen name="margin_end_image_scan_qr_code">20dp</dimen>
+    <dimen name="padding_image_scan_qr_code">5dp</dimen>
+    <dimen name="margin_end_10dp">10dp</dimen>
+
 </resources>

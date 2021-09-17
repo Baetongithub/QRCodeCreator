@@ -1,4 +1,4 @@
-package com.geektech.qrcodecreater
+package com.geektech.qrcodecreator
 
 import org.junit.Test
 

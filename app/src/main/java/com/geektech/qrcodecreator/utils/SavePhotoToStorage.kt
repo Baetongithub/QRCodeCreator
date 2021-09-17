@@ -1,4 +1,4 @@
-package com.geektech.qrcodecreater.utils
+package com.geektech.qrcodecreator.utils
 
 import android.content.ContentValues
 import android.content.Context
@@ -9,7 +9,8 @@ import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
 import android.widget.ImageView
-import com.geektech.qrcodecreater.extensions.toast
+import com.geektech.qrcodecreator.R
+import com.geektech.qrcodecreator.extensions.toast
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
@@ -58,7 +59,7 @@ object SavePhotoToStorage {
             if (imageView.drawable != null) {
                 val bitmap: Bitmap = (GetDrawable.drawable(imageView) as BitmapDrawable).bitmap
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, it)
-                context?.toast("QR code successfully saved in the gallery")
+                context?.toast(context.getString(R.string.qr_code_saved_successfuly))
             }
         }
     }

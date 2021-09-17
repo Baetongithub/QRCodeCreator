@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,35 +7,40 @@
     android:layout_marginTop="@dimen/margin_top_layout"
     tools:context=".ui.fragments.YouTubeFragment">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back"
+            app:tint="@color/black"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/fjalla_one"
+            android:gravity="center"
+            android:paddingStart="@dimen/tv_toolbar_padding_start"
+            android:paddingEnd="@dimen/tv_toolbar_padding_end"
+            android:text="@string/youtube"
+            android:textColor="@color/black"
+            android:textSize="18.5sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/image_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/back"
-                app:tint="@color/black" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/fjalla_one"
-                android:gravity="center"
-                android:paddingStart="@dimen/tv_toolbar_padding_start"
-                android:paddingEnd="@dimen/tv_toolbar_padding_end"
-                android:text="@string/youtube"
-                android:textColor="@color/black"
-                android:textSize="18.5sp" />
-
-        </Toolbar>
 
         <RelativeLayout
             android:id="@+id/rl_et_url"
@@ -45,7 +50,7 @@
             android:padding="@dimen/et_url_padding"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/toolbar">
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_url"
@@ -66,7 +71,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <ImageView
-                android:id="@+id/image_scan_action"
+                android:id="@+id/image_make_qr_code_action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/til_url"
@@ -106,7 +111,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="40dp"
             android:backgroundTint="#7A7B80"
-            android:text="Print"
+            android:text="@string/print"
             android:textAllCaps="false"
             android:textSize="17sp"
             app:layout_constraintTop_toBottomOf="@id/button_share" />
@@ -119,11 +124,11 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="40dp"
             android:backgroundTint="#3D4485"
-            android:text="Save to gallery"
+            android:text="@string/save_to_gallery"
             android:textAllCaps="false"
             android:textSize="17sp"
             app:layout_constraintTop_toBottomOf="@id/button_print" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-</ScrollView>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
