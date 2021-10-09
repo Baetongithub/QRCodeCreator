@@ -37,7 +37,7 @@
 
         <action
             android:id="@+id/action_homeFragment_to_facebookFragment"
-            app:destination="@id/VKFragment"
+            app:destination="@id/facebook_fragment"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
@@ -57,7 +57,7 @@
         tools:layout="@layout/fragment_t_g" />
 
     <fragment
-        android:id="@+id/VKFragment"
+        android:id="@+id/facebook_fragment"
         android:name="com.geektech.qrcodecreator.ui.fragments.FacebookFragment"
         android:label="fragment_v_k"
         tools:layout="@layout/fragment_facebook" />

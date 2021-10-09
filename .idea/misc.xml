@@ -8,10 +8,13 @@
         <entry key="..\:/Android 1/QRCodeCreater/app/src/main/res/drawable/backgr_rl_other_qr_codes.xml" value="0.19583333333333333" />
         <entry key="..\:/Android 1/QRCodeCreater/app/src/main/res/drawable/backgr_status_bar_gradient.xml" value="0.19583333333333333" />
         <entry key="..\:/Android 1/QRCodeCreater/app/src/main/res/drawable/ic_scan.xml" value="0.19583333333333333" />
+        <entry key="..\:/Android 1/QRCodeCreater/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android 1/QRCodeCreater/app/src/main/res/layout/custom_toolbar.xml" value="0.16666666666666666" />
         <entry key="..\:/Android 1/QRCodeCreater/app/src/main/res/layout/fragment_any_u_r_l.xml" value="0.22" />
-        <entry key="..\:/Android 1/QRCodeCreater/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Android 1/QRCodeCreater/app/src/main/res/layout/fragment_facebook.xml" value="0.1621376811594203" />
+        <entry key="..\:/Android 1/QRCodeCreater/app/src/main/res/layout/fragment_home.xml" value="0.16666666666666666" />
         <entry key="..\:/Android 1/QRCodeCreater/app/src/main/res/layout/fragment_instagram.xml" value="0.1" />
+        <entry key="..\:/Android 1/QRCodeCreater/app/src/main/res/layout/fragment_t_g.xml" value="0.1" />
         <entry key="..\:/Android 1/QRCodeCreater/app/src/main/res/layout/fragment_you_tube.xml" value="0.1" />
       </map>
     </option>
