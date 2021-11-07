@@ -27,11 +27,6 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         return vb.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding = null
-    }
-
     abstract fun viewBinding(inflater: LayoutInflater, container: ViewGroup?): VB
     abstract fun setupUI()
 
@@ -48,5 +43,10 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         var view = activity?.currentFocus
         if (view == null) view = View(activity)
         imm.hideSoftInputFromWindow(view.windowToken, 0)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
     }
 }
