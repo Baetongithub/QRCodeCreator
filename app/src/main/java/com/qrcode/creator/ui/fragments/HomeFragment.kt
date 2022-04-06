@@ -30,7 +30,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                     val intentResult: IntentResult =
                         IntentIntegrator.parseActivityResult(activityResult.resultCode, activityResult.data)
                     if (intentResult.contents != null) {
-                        toast(intentResult.contents)
                         vb.tvScanResult.text = intentResult.contents
                         vb.rlScanResult.visible()
                     } else vb.rlScanResult.gone()
