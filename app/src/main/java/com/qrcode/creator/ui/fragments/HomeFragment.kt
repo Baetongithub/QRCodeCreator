@@ -53,17 +53,21 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     private fun initClicks() {
 
         vb.etUrl.onFocusChangeListener = View.OnFocusChangeListener { _, onFocus ->
-            if (onFocus) {
-                vb.rlOther.background = drawable(R.drawable.backgr_rl_white_other)
-                vb.rlOther.elevation = 0f
-                vb.imageOthers.gone()
-                vb.imageMakeQrCodeAction.visible()
-            } else {
-                vb.rlOther.background = drawable(R.drawable.backgr_status_bar_gradient)
-                vb.rlOther.elevation = R.dimen.elevation_ten_dp.toFloat()
-                vb.imageOthers.visible()
-                vb.imageMakeQrCodeAction.gone()
-            }
+            if (onFocus)
+                vb.run {
+                    rlOther.background = drawable(R.drawable.backgr_rl_white_other)
+                    rlOther.elevation = 0f
+                    imageOthers.gone()
+                    imageMakeQrCodeAction.visible()
+                }
+            else
+                vb.run {
+                    rlOther.background = drawable(R.drawable.backgr_status_bar_gradient)
+                    rlOther.elevation = R.dimen.elevation_ten_dp.toFloat()
+                    imageOthers.visible()
+                    imageMakeQrCodeAction.gone()
+                }
+
         }
 
         vb.imageMakeQrCodeAction.setOnClickListener {
