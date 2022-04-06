@@ -12,4 +12,5 @@
     <color name="button_share">#6979F8</color>
     <color name="button_print">#7A7B80</color>
     <color name="button_save_to_gallery">#3D4485</color>
+    <color name="link_color">#3586FF</color>
 </resources>

@@ -13,9 +13,9 @@ import com.geektech.qrcodecreator.extensions.toast
 import java.io.File
 import java.io.FileOutputStream
 
-object ShareImage {
+object Share {
 
-    fun share(context: Context?, imageView: ImageView, name: String) {
+    fun shareImage(context: Context?, imageView: ImageView, name: String) {
         try {
             val file =
                 File(
@@ -44,5 +44,15 @@ object ShareImage {
         } catch (e: Exception) {
             context?.toast(context.getString(R.string.something_went_wrong) + " ${e.localizedMessage}")
         }
+    }
+
+    fun shareText(context: Context?, text: String) {
+        val intent = Intent(Intent.ACTION_SENDTO)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        intent.putExtra(Intent.EXTRA_TEXT, text)
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        intent.type = "text/plain"
+
+        context?.startActivity(Intent.createChooser(intent, context.getString(R.string.share_text_via)))
     }
 }

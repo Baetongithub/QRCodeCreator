@@ -8,7 +8,15 @@ import androidx.fragment.app.Fragment
 
 fun Fragment.toast(txt: String) = Toast.makeText(this.context, txt, Toast.LENGTH_SHORT).show()
 
-fun Fragment.getDrawable(drawable: Int): Drawable? = ContextCompat.getDrawable(context!!, drawable)
+fun Fragment.drawable(drawable: Int): Drawable? = ContextCompat.getDrawable(context!!, drawable)
+
+fun View.visible() {
+    this.visibility = View.VISIBLE
+}
+
+fun View.gone() {
+    this.visibility = View.GONE
+}
 
 var View.visible: Boolean
     get() = visibility == View.VISIBLE

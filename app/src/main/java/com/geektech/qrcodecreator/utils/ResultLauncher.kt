@@ -24,7 +24,6 @@ class ResultLauncher(
 
     fun scanQRCodeButton() {
         val integrator = IntentIntegrator(activity)
-//        integrator.initiateScan()
         registerActivityResult.launch(integrator.createScanIntent())
     }
 

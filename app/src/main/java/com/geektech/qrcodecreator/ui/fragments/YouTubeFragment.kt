@@ -1,7 +1,5 @@
 package com.geektech.qrcodecreator.ui.fragments
 
-import android.view.LayoutInflater
-import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import com.geektech.qrcodecreator.R
 import com.geektech.qrcodecreator.databinding.FragmentYouTubeBinding
@@ -9,11 +7,9 @@ import com.geektech.qrcodecreator.ui.base.BaseFragment
 import com.geektech.qrcodecreator.utils.GenerateCode
 import com.geektech.qrcodecreator.utils.PrintHelp
 import com.geektech.qrcodecreator.utils.SavePhotoToStorage
-import com.geektech.qrcodecreator.utils.ShareImage
+import com.geektech.qrcodecreator.utils.Share
 
-class YouTubeFragment : BaseFragment<FragmentYouTubeBinding>() {
-    override fun viewBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentYouTubeBinding =
-        FragmentYouTubeBinding.inflate(inflater, container, false)
+class YouTubeFragment : BaseFragment<FragmentYouTubeBinding>(FragmentYouTubeBinding::inflate) {
 
     override fun setupUI() {
         initClicks()
@@ -35,7 +31,7 @@ class YouTubeFragment : BaseFragment<FragmentYouTubeBinding>() {
             false
         }
 
-        vb.buttonShare.setOnClickListener { ShareImage.share(context, vb.imageQrCode, getString(R.string.youtube)) }
+        vb.buttonShare.setOnClickListener { Share.shareImage(context, vb.imageQrCode, getString(R.string.youtube)) }
 
         vb.buttonPrint.setOnClickListener { PrintHelp.doPhotoPrint(activity, vb.imageQrCode) }
 

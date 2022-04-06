@@ -1,58 +1,52 @@
 package com.geektech.qrcodecreator.ui.fragments
 
 import android.app.Activity
-import android.view.LayoutInflater
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.view.View
-import android.view.View.GONE
-import android.view.View.VISIBLE
-import android.view.ViewGroup
 import android.widget.Toolbar
-import androidx.activity.result.contract.ActivityResultContracts
 import com.geektech.qrcodecreator.R
+import com.geektech.qrcodecreator.databinding.CustomToolbarBinding
 import com.geektech.qrcodecreator.databinding.FragmentHomeBinding
-import com.geektech.qrcodecreator.extensions.getDrawable
+import com.geektech.qrcodecreator.extensions.drawable
+import com.geektech.qrcodecreator.extensions.gone
 import com.geektech.qrcodecreator.extensions.toast
+import com.geektech.qrcodecreator.extensions.visible
 import com.geektech.qrcodecreator.ui.base.BaseFragment
-import com.geektech.qrcodecreator.utils.GenerateCode
-import com.geektech.qrcodecreator.utils.PrintHelp
-import com.geektech.qrcodecreator.utils.SavePhotoToStorage
-import com.geektech.qrcodecreator.utils.ShareImage
+import com.geektech.qrcodecreator.utils.*
 import com.google.zxing.integration.android.IntentIntegrator
 import com.google.zxing.integration.android.IntentResult
 
-class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
-    override fun viewBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentHomeBinding =
-        FragmentHomeBinding.inflate(inflater, container, false)
-
-    private val getContent =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { activityResult ->
-            if (activityResult?.resultCode == Activity.RESULT_OK) {
-                val intentResult: IntentResult =
-                    IntentIntegrator.parseActivityResult(activityResult.resultCode, activityResult.data)
-                if (intentResult.contents != null)
-                    toast(intentResult.contents)
-                    vb.etUrl.setText(intentResult.contents)
-            }
-        }
+class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
     override fun setupUI() {
 
-        val toolbar: Toolbar? = activity?.findViewById(R.id.toolbar_custom)
+        val ctb = this.view?.let { CustomToolbarBinding.bind(it) }
+        val toolbar: Toolbar? = ctb?.toolbarCustom
         activity?.setActionBar(toolbar)
 
-        vb.imageScanQrCode.setOnClickListener {
-            val integrator = IntentIntegrator(activity)
-            integrator.initiateScan()
-           // getContent.launch(null)
-        }
+        val getContent =
+            ResultLauncher(activity, viewLifecycleOwner, activity?.activityResultRegistry!!) { activityResult ->
+                if (activityResult.resultCode == Activity.RESULT_OK) {
+                    val intentResult: IntentResult =
+                        IntentIntegrator.parseActivityResult(activityResult.resultCode, activityResult.data)
+                    if (intentResult.contents != null) {
+                        toast(intentResult.contents)
+                        vb.tvScanResult.text = intentResult.contents
+                        vb.rlScanResult.visible()
+                    } else vb.rlScanResult.gone()
+                }
+            }
+        vb.imageScanQrCode.setOnClickListener { getContent.scanQRCodeButton() }
 
         initClicks()
         onClickButtons()
     }
 
     private fun onClickButtons() {
-        vb.buttonShare.setOnClickListener { ShareImage.share(context, vb.imageQrCode, getString(R.string.app_name)) }
+        vb.buttonShare.setOnClickListener { Share.shareImage(context, vb.imageQrCode, getString(R.string.app_name)) }
 
         vb.buttonPrint.setOnClickListener { PrintHelp.doPhotoPrint(activity, vb.imageQrCode) }
 
@@ -63,22 +57,29 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
         vb.etUrl.onFocusChangeListener = View.OnFocusChangeListener { _, onFocus ->
             if (onFocus) {
-                vb.rlOther.background = getDrawable(R.drawable.backgr_rl_white_other)
+                vb.rlOther.background = drawable(R.drawable.backgr_rl_white_other)
                 vb.rlOther.elevation = 0f
-                vb.imageOthers.visibility = GONE
-                vb.imageMakeQrCodeAction.visibility = VISIBLE
+                vb.imageOthers.gone()
+                vb.imageMakeQrCodeAction.visible()
             } else {
-                vb.rlOther.background = getDrawable(R.drawable.backgr_status_bar_gradient)
+                vb.rlOther.background = drawable(R.drawable.backgr_status_bar_gradient)
                 vb.rlOther.elevation = R.dimen.elevation_ten_dp.toFloat()
-                vb.imageOthers.visibility = VISIBLE
-                vb.imageMakeQrCodeAction.visibility = GONE
+                vb.imageOthers.visible()
+                vb.imageMakeQrCodeAction.gone()
             }
         }
 
         vb.imageMakeQrCodeAction.setOnClickListener {
             GenerateCode.generate(context, vb.etUrl.text.toString().trim(), vb.imageQrCode)
-            vb.groupQrCodeImagesButtons.visibility = VISIBLE
+            vb.groupQrCodeImagesButtons.visible()
             hideKeyBoard()
+        }
+
+        vb.imageBtnSend.setOnClickListener { Share.shareText(context, vb.tvScanResult.text.toString()) }
+
+        vb.imageBtnCopy.setOnClickListener {
+            Copy.copyText(context, vb.tvScanResult.text.toString())
+            toast(getString(R.string.text_copied_to_clipboard))
         }
 
         vb.rlYoutube.setOnClickListener { navigate(R.id.action_homeFragment_to_youTubeFragment) }

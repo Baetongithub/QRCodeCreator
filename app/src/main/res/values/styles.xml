@@ -9,7 +9,7 @@
 
     <style name="rl_s_n_items_style">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:elevation">@dimen/elevation_ten_dp</item>
         <item name="android:layout_marginStart">@dimen/margin_start_end</item>
         <item name="android:layout_marginTop">@dimen/margin_top</item>

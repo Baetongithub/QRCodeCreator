@@ -10,7 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseFragment<VB : ViewBinding> : Fragment() {
+abstract class BaseFragment<VB : ViewBinding>(private val viewBinding: (LayoutInflater, ViewGroup?, Boolean) -> VB) :
+    Fragment() {
 
     private var binding: VB? = null
     val vb get() = binding!!
@@ -21,13 +22,12 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        binding = viewBinding(inflater, container)
+        binding = viewBinding(inflater, container, false)
         setupUI()
 
         return vb.root
     }
 
-    abstract fun viewBinding(inflater: LayoutInflater, container: ViewGroup?): VB
     abstract fun setupUI()
 
     fun navigateUp() {

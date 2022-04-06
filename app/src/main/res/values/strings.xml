@@ -13,11 +13,16 @@
     <string name="telegram">Telegram</string>
     <string name="youtube">YouTube</string>
     <string name="facebook">Facebook</string>
-    <string name="any_url_addresses">Make a QR code from any URL`s or text</string>
+    <string name="title_url_addresses">Make a QR code from any URL or text</string>
     <string name="other_qr_codes">Other QR codes</string>
     <string name="qr_code_saved_successfuly">QR code successfully saved in the gallery</string>
     <string name="share_qr_code_via">Share QR code via</string>
     <string name="print">Print</string>
     <string name="save_to_gallery">Save to gallery</string>
     <string name="put_url_or_text_here">Put URL or text here</string>
+    <string name="scan_result">Scan results</string>
+    <string name="copy">Copy</string>
+    <string name="send">Send</string>
+    <string name="share_text_via">Share text via</string>
+    <string name="text_copied_to_clipboard">Text copied to clipboard</string>
 </resources>

@@ -1,7 +1,9 @@
 package com.geektech.qrcodecreator.ui.main
 
+import android.content.ClipboardManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import com.geektech.qrcodecreator.R
 import com.geektech.qrcodecreator.databinding.ActivityMainBinding
@@ -14,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         vb = ActivityMainBinding.inflate(layoutInflater)
         setContentView(vb.root)
-
     }
 
     override fun onSupportNavigateUp(): Boolean =
