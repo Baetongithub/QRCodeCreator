@@ -1,4 +1,4 @@
-package com.geektech.qrcodecreator.ui.base
+package com.qrcode.creator.ui.base
 
 import android.content.Context
 import android.os.Bundle

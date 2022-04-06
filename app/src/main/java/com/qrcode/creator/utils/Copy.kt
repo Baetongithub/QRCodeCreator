@@ -1,4 +1,4 @@
-package com.geektech.qrcodecreator.utils
+package com.qrcode.creator.utils
 
 import android.content.ClipData
 import android.content.ClipboardManager

@@ -1,4 +1,4 @@
-package com.geektech.qrcodecreator.utils
+package com.qrcode.creator.utils
 
 import android.content.Context
 import android.content.Intent
@@ -7,9 +7,9 @@ import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.widget.ImageView
 import androidx.core.content.FileProvider
-import com.geektech.qrcodecreator.BuildConfig
-import com.geektech.qrcodecreator.R
-import com.geektech.qrcodecreator.extensions.toast
+import com.qrcode.creator.BuildConfig
+import com.qrcode.creator.R
+import com.qrcode.creator.extensions.toast
 import java.io.File
 import java.io.FileOutputStream
 

@@ -1,22 +1,19 @@
-package com.geektech.qrcodecreator.ui.fragments
+package com.qrcode.creator.ui.fragments
 
 import android.app.Activity
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import android.view.View
 import android.widget.Toolbar
-import com.geektech.qrcodecreator.R
-import com.geektech.qrcodecreator.databinding.CustomToolbarBinding
-import com.geektech.qrcodecreator.databinding.FragmentHomeBinding
-import com.geektech.qrcodecreator.extensions.drawable
-import com.geektech.qrcodecreator.extensions.gone
-import com.geektech.qrcodecreator.extensions.toast
-import com.geektech.qrcodecreator.extensions.visible
-import com.geektech.qrcodecreator.ui.base.BaseFragment
-import com.geektech.qrcodecreator.utils.*
+import com.qrcode.creator.R
+import com.qrcode.creator.databinding.CustomToolbarBinding
+import com.qrcode.creator.databinding.FragmentHomeBinding
+import com.qrcode.creator.extensions.drawable
+import com.qrcode.creator.extensions.toast
+import com.qrcode.creator.ui.base.BaseFragment
+import com.qrcode.creator.utils.*
 import com.google.zxing.integration.android.IntentIntegrator
 import com.google.zxing.integration.android.IntentResult
+import com.qrcode.creator.extensions.gone
+import com.qrcode.creator.extensions.visible
 
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.geektech.qrcodecreator.ui.fragments.HomeFragment"
+        android:name="com.qrcode.creator.ui.fragments.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home">
 
@@ -46,25 +46,25 @@
 
     <fragment
         android:id="@+id/instagramFragment"
-        android:name="com.geektech.qrcodecreator.ui.fragments.InstagramFragment"
+        android:name="com.qrcode.creator.ui.fragments.InstagramFragment"
         android:label="fragment_instagram"
         tools:layout="@layout/fragment_instagram" />
 
     <fragment
         android:id="@+id/TGFragment"
-        android:name="com.geektech.qrcodecreator.ui.fragments.TGFragment"
+        android:name="com.qrcode.creator.ui.fragments.TGFragment"
         android:label="fragment_t_g"
         tools:layout="@layout/fragment_t_g" />
 
     <fragment
         android:id="@+id/facebook_fragment"
-        android:name="com.geektech.qrcodecreator.ui.fragments.FacebookFragment"
+        android:name="com.qrcode.creator.ui.fragments.FacebookFragment"
         android:label="fragment_v_k"
         tools:layout="@layout/fragment_facebook" />
 
     <fragment
         android:id="@+id/youTubeFragment"
-        android:name="com.geektech.qrcodecreator.ui.fragments.YouTubeFragment"
+        android:name="com.qrcode.creator.ui.fragments.YouTubeFragment"
         android:label="fragment_you_tube"
         tools:layout="@layout/fragment_you_tube" />
 </navigation>

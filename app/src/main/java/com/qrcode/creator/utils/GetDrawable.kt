@@ -1,4 +1,4 @@
-package com.geektech.qrcodecreator.utils
+package com.qrcode.creator.utils
 
 import android.graphics.drawable.Drawable
 import android.widget.ImageView

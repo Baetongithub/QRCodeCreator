@@ -1,11 +1,11 @@
-package com.geektech.qrcodecreator.utils
+package com.qrcode.creator.utils
 
 import android.app.Activity
 import android.graphics.drawable.BitmapDrawable
 import android.widget.ImageView
 import androidx.print.PrintHelper
-import com.geektech.qrcodecreator.R
-import com.geektech.qrcodecreator.extensions.toast
+import com.qrcode.creator.R
+import com.qrcode.creator.extensions.toast
 
 object PrintHelp {
     fun doPhotoPrint(activity: Activity?, imageView: ImageView) {

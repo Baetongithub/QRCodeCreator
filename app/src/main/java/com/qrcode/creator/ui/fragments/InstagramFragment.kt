@@ -1,15 +1,15 @@
-package com.geektech.qrcodecreator.ui.fragments
+package com.qrcode.creator.ui.fragments
 
 import android.view.inputmethod.EditorInfo
-import com.geektech.qrcodecreator.R
-import com.geektech.qrcodecreator.databinding.FragmentFacebookBinding
-import com.geektech.qrcodecreator.ui.base.BaseFragment
-import com.geektech.qrcodecreator.utils.GenerateCode
-import com.geektech.qrcodecreator.utils.PrintHelp
-import com.geektech.qrcodecreator.utils.SavePhotoToStorage
-import com.geektech.qrcodecreator.utils.Share
+import com.qrcode.creator.R
+import com.qrcode.creator.databinding.FragmentInstagramBinding
+import com.qrcode.creator.ui.base.BaseFragment
+import com.qrcode.creator.utils.GenerateCode
+import com.qrcode.creator.utils.PrintHelp
+import com.qrcode.creator.utils.SavePhotoToStorage
+import com.qrcode.creator.utils.Share
 
-class FacebookFragment : BaseFragment<FragmentFacebookBinding>(FragmentFacebookBinding::inflate) {
+class InstagramFragment : BaseFragment<FragmentInstagramBinding>(FragmentInstagramBinding::inflate) {
 
     override fun setupUI() {
         initClicks()
@@ -25,7 +25,7 @@ class FacebookFragment : BaseFragment<FragmentFacebookBinding>(FragmentFacebookB
             false
         }
 
-        vb.buttonShare.setOnClickListener { Share.shareImage(context, vb.imageQrCode, getString(R.string.facebook)) }
+        vb.buttonShare.setOnClickListener { Share.shareImage(context, vb.imageQrCode, getString(R.string.instagram)) }
 
         vb.buttonPrint.setOnClickListener { PrintHelp.doPhotoPrint(activity, vb.imageQrCode) }
 
@@ -35,7 +35,7 @@ class FacebookFragment : BaseFragment<FragmentFacebookBinding>(FragmentFacebookB
     }
 
     private fun generateCodeAndHideKeyboard() {
-        GenerateCode.generate(context, "https://facebook.com/${vb.etUrl.text.toString().trim()}", vb.imageQrCode)
+        GenerateCode.generate(context, "https://instagram.com/${vb.etUrl.text.toString().trim()}", vb.imageQrCode)
         hideKeyBoard()
     }
 }

@@ -1,9 +1,9 @@
-package com.geektech.qrcodecreator.utils
+package com.qrcode.creator.utils
 
 import android.content.Context
 import android.widget.ImageView
-import com.geektech.qrcodecreator.R
-import com.geektech.qrcodecreator.extensions.toast
+import com.qrcode.creator.R
+import com.qrcode.creator.extensions.toast
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.WriterException
 import com.journeyapps.barcodescanner.BarcodeEncoder
