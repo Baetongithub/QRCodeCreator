@@ -15,7 +15,6 @@ import com.google.zxing.integration.android.IntentResult
 import com.qrcode.creator.extensions.gone
 import com.qrcode.creator.extensions.visible
 
-
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
     override fun setupUI() {
@@ -66,7 +65,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                     imageOthers.visible()
                     imageMakeQrCodeAction.gone()
                 }
-
         }
 
         vb.imageMakeQrCodeAction.setOnClickListener {

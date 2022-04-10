@@ -17,6 +17,7 @@
             android:id="@+id/image_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/btn_back"
             android:src="@mipmap/back"
             app:tint="@color/black" />
 
@@ -92,6 +93,14 @@
                 app:layout_constraintTop_toBottomOf="@id/rl_et_url"
                 tools:ignore="ContentDescription" />
 
+            <TextView
+                android:id="@+id/tv_qr_code_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_qr_code"
+                tools:text="QR code value"
+                style="@style/style_tv_code_value" />
+
             <Button
                 android:id="@+id/button_share"
                 android:layout_width="match_parent"
@@ -111,7 +120,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="40dp"
                 android:backgroundTint="#7A7B80"
-                android:text="Print"
+                android:text="@string/print"
                 android:textAllCaps="false"
                 android:textSize="17sp"
                 app:layout_constraintTop_toBottomOf="@id/button_share" />

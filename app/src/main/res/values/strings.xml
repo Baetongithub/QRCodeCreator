@@ -25,4 +25,5 @@
     <string name="send">Send</string>
     <string name="share_text_via">Share text via</string>
     <string name="text_copied_to_clipboard">Text copied to clipboard</string>
+    <string name="btn_back">btn_back</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.qrcode.creator.ui.fragments
 
 import android.view.inputmethod.EditorInfo
+import android.widget.TextView
 import com.qrcode.creator.R
 import com.qrcode.creator.databinding.FragmentTGBinding
 import com.qrcode.creator.ui.base.BaseFragment
@@ -16,11 +17,11 @@ class TGFragment : BaseFragment<FragmentTGBinding>(FragmentTGBinding::inflate) {
     }
 
     private fun initClicks() {
-        vb.imageMakeQrCodeAction.setOnClickListener { generateCodeAndHideKeyboard() }
+        vb.imageMakeQrCodeAction.setOnClickListener { generateCodeAndHideKeyboard(vb.tvQrCodeValue) }
 
         vb.etUrl.setOnEditorActionListener { _, actionId, _ ->
             when (actionId) {
-                EditorInfo.IME_ACTION_GO -> generateCodeAndHideKeyboard()
+                EditorInfo.IME_ACTION_GO -> generateCodeAndHideKeyboard(vb.tvQrCodeValue)
             }
             false
         }
@@ -34,8 +35,9 @@ class TGFragment : BaseFragment<FragmentTGBinding>(FragmentTGBinding::inflate) {
         vb.imageBack.setOnClickListener { navigateUp() }
     }
 
-    private fun generateCodeAndHideKeyboard() {
+    private fun generateCodeAndHideKeyboard(tv: TextView) {
         GenerateCode.generate(context, "https://t.me/${vb.etUrl.text.toString().trim()}", vb.imageQrCode)
+        tv.text = ("https://t.me/${vb.etUrl.text.toString().trim()}")
         hideKeyBoard()
     }
 }

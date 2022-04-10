@@ -47,7 +47,7 @@ object Share {
     }
 
     fun shareText(context: Context?, text: String) {
-        val intent = Intent(Intent.ACTION_SENDTO)
+        val intent = Intent(Intent.ACTION_SEND)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         intent.putExtra(Intent.EXTRA_TEXT, text)
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)

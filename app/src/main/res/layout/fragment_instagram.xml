@@ -94,6 +94,14 @@
                 app:layout_constraintTop_toBottomOf="@id/rl_et_url"
                 tools:ignore="ContentDescription" />
 
+            <TextView
+                android:id="@+id/tv_qr_code_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_qr_code"
+                tools:text="QR code value"
+                style="@style/style_tv_code_value" />
+
             <Button
                 android:id="@+id/button_share"
                 android:layout_width="match_parent"

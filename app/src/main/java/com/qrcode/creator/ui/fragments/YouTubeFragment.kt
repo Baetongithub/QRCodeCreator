@@ -18,6 +18,7 @@ class YouTubeFragment : BaseFragment<FragmentYouTubeBinding>(FragmentYouTubeBind
     private fun initClicks() {
         vb.imageMakeQrCodeAction.setOnClickListener {
             GenerateCode.generate(context, vb.etUrl.text.toString().trim(), vb.imageQrCode)
+            vb.tvQrCodeValue.text = vb.etUrl.text.toString()
             hideKeyBoard()
         }
 
@@ -25,6 +26,7 @@ class YouTubeFragment : BaseFragment<FragmentYouTubeBinding>(FragmentYouTubeBind
             when (actionId) {
                 EditorInfo.IME_ACTION_GO -> {
                     GenerateCode.generate(context, vb.etUrl.text.toString().trim(), vb.imageQrCode)
+                    vb.tvQrCodeValue.text = vb.etUrl.text.toString()
                     hideKeyBoard()
                 }
             }
